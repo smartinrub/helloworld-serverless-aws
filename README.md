@@ -1,31 +1,4 @@
 # helloworld-serverless-aws
-
-This is a sample template for helloworld-serverless-aws - Below is a brief explanation of what we have generated for you:
-
-```bash
-.
-├── README.md                               <-- This instructions file
-├── pom.xml                                 <-- Java dependencies
-├── src
-│   ├── main
-│   │   └── java
-│   │       └── helloworld                  <-- Source code for a lambda function
-│   │           ├── App.java                <-- Lambda function code
-│   │           └── GatewayResponse.java    <-- POJO for API Gateway Responses object 
-│   └── test                                <-- Unit tests
-│       └── java
-│           └── helloworld
-│               └── AppTest.java
-└── template.yaml
-```
-
-## Requirements
-
-* AWS CLI already configured with Administrator permission
-* [Java SE Development Kit 8 installed](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-* [Docker installed](https://www.docker.com/community-edition)
-* [Maven](https://maven.apache.org/install.html)
-
 ## Setup process
 
 ### Installing dependencies
@@ -96,8 +69,6 @@ sam deploy \
 ```
 
 * Regions available on AWS: https://docs.aws.amazon.com/general/latest/gr/rande.html
-
-> **See [Serverless Application Model (SAM) HOWTO Guide](https://github.com/awslabs/serverless-application-model/blob/master/HOWTO.md) for more details in how to get started.**
 
 After deployment is complete you can run the following command to retrieve the API Gateway Endpoint URL:
 
