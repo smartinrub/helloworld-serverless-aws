@@ -92,7 +92,10 @@ sam deploy \
     --template-file packaged.yaml \
     --stack-name helloworld-serverless-aws \
     --capabilities CAPABILITY_IAM
+    --region <region>
 ```
+
+* Regions available on AWS: https://docs.aws.amazon.com/general/latest/gr/rande.html
 
 > **See [Serverless Application Model (SAM) HOWTO Guide](https://github.com/awslabs/serverless-application-model/blob/master/HOWTO.md) for more details in how to get started.**
 
@@ -104,45 +107,5 @@ aws cloudformation describe-stacks \
     --query 'Stacks[].Outputs'
 ```
 
-## Testing
-
-We use `JUnit` for testing our code and you can simply run the following command to run our tests:
-
-```bash
-mvn test
-```
-
-# Appendix
-
-## AWS CLI commands
-
-AWS CLI commands to package, deploy and describe outputs defined within the cloudformation stack:
-
-```bash
-sam package \
-    --template-file template.yaml \
-    --output-template-file packaged.yaml \
-    --s3-bucket REPLACE_THIS_WITH_YOUR_S3_BUCKET_NAME
-
-sam deploy \
-    --template-file packaged.yaml \
-    --stack-name helloworld-serverless-aws \
-    --capabilities CAPABILITY_IAM \
-    --parameter-overrides MyParameterSample=MySampleValue
-
-aws cloudformation describe-stacks \
-    --stack-name helloworld-serverless-aws --query 'Stacks[].Outputs'
-```
-
-## Bringing to the next level
-
-Here are a few ideas that you can use to get more acquainted as to how this overall process works:
-
-* Create an additional API resource (e.g. /hello/{proxy+}) and return the name requested through this new path
-* Update unit test to capture that
-* Package & Deploy
-
-Next, you can use the following resources to know more about beyond hello world samples and how others structure their Serverless applications:
-
-* [AWS Serverless Application Repository](https://aws.amazon.com/serverless/serverlessrepo/)
-# helloworld-serverless-aws
+AWS documentation:
+https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-quick-start.html
